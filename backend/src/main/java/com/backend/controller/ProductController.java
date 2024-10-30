@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping({"/api/products"})
 @CrossOrigin(
-        origins = {"http://localhost:5173"}
+        origins = {"https://narendraeasyshop.netlify.app"}
 )
 public class ProductController {
     private final ProductService productService;
