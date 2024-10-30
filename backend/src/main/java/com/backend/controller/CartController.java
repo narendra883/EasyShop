@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/cartitems")
-@CrossOrigin(origins = "https://narendraeasyshop.netlify.app")
+@CrossOrigin(origins = "http://localhost:5173")
 @RequiredArgsConstructor
 public class CartController {
     private final CartService cartService;

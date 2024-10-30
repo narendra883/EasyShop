@@ -17,7 +17,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins(new String[]{"https://narendraeasyshop.netlify.app"})
+                        .allowedOrigins(new String[]{"http://localhost:5173"})
                         .allowedMethods(new String[]{"GET", "POST", "PUT", "DELETE"})
                         .allowedOrigins(new String[]{"*"});
             }
