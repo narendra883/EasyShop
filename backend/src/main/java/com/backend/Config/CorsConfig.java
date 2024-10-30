@@ -18,6 +18,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins(new String[]{"http://localhost:5173"})
+                        .allowedOrigins(new String[]{"https://easy-shop-self.vercel.app"})
                         .allowedMethods(new String[]{"GET", "POST", "PUT", "DELETE"})
                         .allowedOrigins(new String[]{"*"});
             }
