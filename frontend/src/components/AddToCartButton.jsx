@@ -15,13 +15,13 @@ function AddToCartButton({ userId, productId, quantity = 1 }) {
                 },
                 body: JSON.stringify({ quantity })
             });
-
+    
             if (!response.ok) {
                 throw new Error("Failed to add to cart");
             }
-
-            const data = await response.json();
-            setMessage("Item added to cart successfully!");
+    
+            const data = await response.text();  // Parse as text
+            setMessage(data);  // Display the message directly
             console.log("Added to cart:", data);
         } catch (error) {
             console.error("Error adding to cart:", error);
@@ -30,6 +30,7 @@ function AddToCartButton({ userId, productId, quantity = 1 }) {
             setIsAdding(false);
         }
     };
+    
 
     return (
         <div className="flex flex-col items-center mt-4">
